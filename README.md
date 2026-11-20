@@ -32,7 +32,7 @@
     **请注意，一定要完整克隆子项目，不要漏了 `--recursive`，也不要下载 zip 包！**  
     这步未正确操作会导致所有 OCR（文字识别）失败！
 
-2. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中。
+2. 按 [MaaFramework 开发环境](./docs/MaaFramework.md) 安装项目锁定的版本，下载原生运行包并解压到 `deps`。
 
 3. 配置资源文件。
 
@@ -51,17 +51,7 @@
             python ./install.py
             ```
 
-        2. 执行`MaaPiCli`
-
-            - **Windows**
-
-                运行 `install/MaaPiCli.exe`
-
-            - **Linux/macOS**
-
-                > 如果提示缺少启动权限，可通过 `chmod a+x install/MaaPiCli` 命令添加
-
-                运行 `install/MaaPiCli`
+        2. [MaaPiCli](https://github.com/MaaXYZ/MaaPiCli) 需单独安装；本项目的旧接口配置尚未完成新版客户端联调。
 
 5. 完成开发工作后，上传您的代码并发布版本。
 
