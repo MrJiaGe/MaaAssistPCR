@@ -1,0 +1,6 @@
+{
+    "GuiSmokeTest": {
+        "recognition": "DirectHit",
+        "action": "DoNothing"
+    }
+}

@@ -19,6 +19,6 @@ python -m venv .venv
 
 从 [v5.16.1 官方发布页](https://github.com/MaaXYZ/MaaFramework/releases/tag/v5.16.1) 下载 `MAA-win-x86_64-v5.16.1.zip`。使用 `Get-FileHash -Algorithm SHA256` 确认校验值为 `19588e6fda8d977496eb143cce157ce0c21890bee62aef8fdf1696930fe1286e`，再解压到 `deps/`。确认 `deps/bin/MaaFramework.dll` 和 `deps/share/MaaAgentBinary/` 存在。不要把新版解压覆盖旧版，也不要提交 `deps/`、`.venv/` 或安装输出。
 
-执行 `configure.py` 或 `install.py` 前，需通过 `git submodule update --init --recursive` 准备仓库锁定的 `assets/MaaCommonAssets`，并确认 `assets/MaaCommonAssets/OCR` 存在。MaaPiCli 是独立客户端，不包含在此版本的原生运行包中。旧项目入口和客户端的端到端联调不属于上述资源检查。
+只有使用 OCR 时才需要通过 `git submodule update --init --recursive` 准备仓库锁定的 `assets/MaaCommonAssets`，确认 `assets/MaaCommonAssets/OCR` 存在后运行 `configure.py`。`install.py` 现在构建无需 OCR 的 GUI 开发包，详见 [GUI 开发包](./GUI-Packaging.md)。
 
 以后升级时，同步更新 `requirements-dev.txt` 和本文记录的发布包版本、校验值，并重新运行资源检查。
