@@ -2,19 +2,26 @@
     "interface_version": 2,
     "name": "MaaAssistPCR",
     "version": "0.0.0-dev",
-    "description": "公主连结公会战打轴工具的开发版本。目前只提供 GUI 冒烟测试。",
+    "description": "公主连结公会战打轴工具的开发版本，包含公会战打轴、GUI 冒烟测试和 OCR 点击演示。",
+    "agent": {
+        "child_exec": "./agent/PcrBattleAgent.exe",
+        "child_args": []
+    },
     "controller": [
         {
             "name": "Android",
             "label": "安卓（ADB）",
-            "type": "Adb"
+            "type": "Adb",
+            "display_short_side": 720
         }
     ],
     "resource": [
         {
             "name": "Development",
             "label": "开发资源",
-            "path": ["resource"]
+            "path": [
+                "resource"
+            ]
         }
     ],
     "task": [
@@ -23,6 +30,20 @@
             "label": "GUI 冒烟测试（不操作游戏）",
             "description": "连接 ADB 设备后，仅验证任务调度。不启动游戏，不使用 OCR，不点击。",
             "entry": "GuiSmokeTest"
+        },
+        {
+            "name": "TitleOcrDemo",
+            "label": "OCR 演示：点击开始游戏",
+            "description": "在公主连结标题画面识别“点击屏幕 开始游戏”并点击一次。",
+            "entry": "TitleOcrDemo",
+            "default_check": false
+        },
+        {
+            "name": "PCRBattleTimeline",
+            "label": "公会战打轴（开发版）",
+            "description": "请在游戏内手动编队。停在队伍编组页，运行任务后在编辑器中设置轴，再点击开始战斗。",
+            "entry": "PCRBattleTimeline",
+            "default_check": false
         }
     ]
 }

@@ -1,0 +1,24 @@
+{
+    "TitleOcrDemo": {
+        "action": "DoNothing",
+        "timeout": 5000,
+        "next": [
+            "TitleOcrClick"
+        ]
+    },
+    "TitleOcrClick": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [460, 632, 360, 69],
+                "expected": "^点击屏幕\\s*开始游戏$"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        }
+    }
+}

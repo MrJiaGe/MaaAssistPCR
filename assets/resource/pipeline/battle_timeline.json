@@ -1,0 +1,34 @@
+{
+    "PCRBattleTimeline": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "PCRBattleTimeline",
+        "post_delay": 0
+    },
+    "PCRFormationPage": {
+        "recognition": "OCR",
+        "roi": [548, 34, 185, 45],
+        "expected": "^队伍编组$"
+    },
+    "PCRBattleStartButton": {
+        "recognition": "OCR",
+        "roi": [1050, 573, 167, 61],
+        "expected": "^战斗开始$"
+    },
+    "PCRBattleClock": {
+        "recognition": "OCR",
+        "roi": [1074, 20, 52, 28],
+        "only_rec": true,
+        "expected": "^[01][:：][0-5][0-9]$"
+    },
+    "PCRResultNext": {
+        "recognition": "OCR",
+        "roi": [982, 629, 194, 51],
+        "expected": "^下一步$"
+    },
+    "PCRDamageReport": {
+        "recognition": "OCR",
+        "roi": [1044, 35, 184, 34],
+        "expected": "^伤害报告$"
+    }
+}
